@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 3px rgb(88, 88, 88);
+  padding: 15px;
+  border-radius: 10px;
+  width: 110px;
+}
+
+.img {
+  margin-bottom: 5px;
+  width: 90px;
+}
+
+.p {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.isOnline {
+  color: rgb(2, 177, 2);
+  font-weight: 450;
+}
+
+.isOffline {
+  color: red;
+  font-weight: 450;
+}

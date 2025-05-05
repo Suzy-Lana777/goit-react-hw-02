@@ -1,0 +1,56 @@
+.section {
+  border: solid 3px rgb(151, 151, 151);
+  width: 350px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+}
+.img {
+  border-radius: 50%;
+  background-color: rgb(41, 41, 41);
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+}
+
+.text {
+  color: rgba(117, 117, 117, 0.801);
+  text-align: center;
+}
+.text:last-child {
+  margin-bottom: 10px;
+}
+
+.stats {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.ul {
+  display: flex;
+  background-color: rgba(194, 194, 194, 0.788);
+  border-top: solid 3px rgb(151, 151, 151);
+  justify-content: space-around;
+}
+
+.li {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.li:not(:last-child) {
+  border-right: solid 3px rgb(151, 151, 151);
+}
