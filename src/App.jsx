@@ -1,24 +1,22 @@
-import Profile from './components/Profile/Profile';
-import userData from './userData.json';
-
-import FriendList from './components/FriendList/FriendList';
-import friends from './friends.json';
-
-import TransactionHistory from './components/TransactionHistory/TransactionHistory';
-import transactions from './transactions.json';
+import { useState } from 'react';
+import Feedback from './components/Feedback/Feedback';
+import Options from './components/Options/Options';
 
 export default function App() {
+  const [feedback, setFeedback] = useState({
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  });
+
   return (
     <>
-      <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-      />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      <div>
+        <Options />
+      </div>
+      <div>
+        <Feedback />
+      </div>
     </>
   );
 }
