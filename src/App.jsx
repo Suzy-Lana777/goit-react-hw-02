@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Feedback from './components/Feedback/Feedback';
 import Options from './components/Options/Options';
+import Notification from './components/Notification/Notification';
 import Description from './components/Description/Description';
 
 export default function App() {
@@ -11,10 +12,14 @@ export default function App() {
   });
 
   const updateFeedback = (feedbackType) => {
-    setFeedback((item) => ({
-      ...item,
-      [feedbackType]: item[feedbackType] + 1,
-    }));
+    if (feedbackType === 'reset') {
+      setFeedback({ good: 0, neutral: 0, bad: 0 });
+    } else {
+      setFeedback((item) => ({
+        ...item,
+        [feedbackType]: item[feedbackType] + 1,
+      }));
+    }
   };
 
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
@@ -28,7 +33,11 @@ export default function App() {
         <Options clickButton={updateFeedback} totalFeedback={totalFeedback} />
       </div>
       <div>
-        <Feedback feedback={feedback} />
+        {totalFeedback > 0 ? (
+          <Feedback feedback={feedback} totalFeedback={totalFeedback} />
+        ) : (
+          <Notification message="No feedback yet" />
+        )}
       </div>
     </>
   );
