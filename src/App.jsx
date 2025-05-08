@@ -18,10 +18,6 @@ export default function App() {
     localStorage.setItem('feedback', JSON.stringify(feedback));
   }, [feedback]);
 
-  useEffect(() => {
-    localStorage.setItem('feedback', JSON.stringify(feedback));
-  }, [feedback]);
-
   const updateFeedback = (feedbackType) => {
     if (feedbackType === 'reset') {
       setFeedback({ good: 0, neutral: 0, bad: 0 });
