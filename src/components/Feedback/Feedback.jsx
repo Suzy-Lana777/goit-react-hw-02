@@ -11,7 +11,7 @@ export default function Feedback({
       <p className={css.text}>Neutral: {feedback.neutral}</p>
       <p className={css.text}>Bad: {feedback.bad}</p>
       <p className={css.text}>Total: {totalFeedback}</p>
-      <p className={css.text}>Positive feedback: {positiveFeedback}%</p>
+      <p className={css.list}>Positive feedback: {positiveFeedback}%</p>
     </div>
   );
 }

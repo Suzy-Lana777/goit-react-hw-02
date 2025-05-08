@@ -1,9 +1,11 @@
 import css from './Description.module.css';
+import { IoIosCafe } from 'react-icons/io';
 
 export default function Description() {
   return (
     <div className={css.container}>
       <h1 className={css.title}>
+        <IoIosCafe className={css.icon} />
         <span className={css.title_span}>Sip</span> Happens Café
       </h1>
       <p className={css.text}>

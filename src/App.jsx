@@ -1,3 +1,4 @@
+import './App.css';
 import { useState, useEffect } from 'react';
 import Feedback from './components/Feedback/Feedback';
 import Options from './components/Options/Options';
@@ -39,7 +40,7 @@ export default function App() {
 
   return (
     <>
-      <div>
+      <div className="container">
         <Description />
       </div>
       <div>
